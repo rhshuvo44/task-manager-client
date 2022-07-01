@@ -1,9 +1,9 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./Shared/Navbar";
-import Footer from "./Shared/Footer";
+import { Route, Routes } from "react-router-dom";
+import Calendar from "../pages/Calendar";
 import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
+import Footer from "./Shared/Footer";
+import Navbar from "./Shared/Navbar";
 
 const App = () => {
   return (
@@ -11,6 +11,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/calendar" element={<Calendar />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
