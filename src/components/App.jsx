@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Calendar from "../pages/Calendar";
+import CreateTask from "../pages/CreateTask";
 import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
 import Footer from "./Shared/Footer";
@@ -11,6 +12,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/create" element={<CreateTask />} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
