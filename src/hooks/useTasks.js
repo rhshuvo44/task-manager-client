@@ -9,7 +9,7 @@ const useTasks = () => {
   // Fetch tasks
   const fetchTasks = async (type) => {
     const res = await axios.get(
-      `https://red-marks-63494.herokuapp.com/task/all`
+      `https://red-marks-63494.herokuapp.com/all`
     );
     setLoading(false);
     setTasks(res.data);
@@ -22,7 +22,7 @@ const useTasks = () => {
         status: status === "complete" ? "uncomplete" : "complete",
       };
       const res = await axios.put(
-        `https://red-marks-63494.herokuapp.com/task/${id}`,
+        `https://red-marks-63494.herokuapp.com/all/${id}`,
         data
       );
       toast.success("Task successfully updated");
@@ -35,7 +35,7 @@ const useTasks = () => {
   // Delete task
   const deleteTask = async (id) => {
     try {
-      await axios.delete(`https://red-marks-63494.herokuapp.com/task/${id}`);
+      await axios.delete(`https://red-marks-63494.herokuapp.com/all/${id}`);
       toast.success("Task successfully deleted");
       fetchTasks();
     } catch (err) {
