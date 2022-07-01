@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: Ubuntu;
+}
+.react-calendar {
+  width: 100% !important;
+  border-radius: 1rem !important;
+  border: none !important;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  overflow: hidden !important;
+}
+.react-calendar__navigation {
+  background: #6419e6 !important;
+  color: #fff !important;
+  font-weight: 900 !important;
+}
+.react-calendar__navigation__label:hover,
+.react-calendar__navigation__label:focus,
+.react-calendar__navigation__arrow:hover,
+.react-calendar__navigation__arrow:focus {
+  background: #ef4444 !important;
+}
+.react-calendar__viewContainer {
+  padding: 1rem 0 !important;
+}
+.react-calendar__tile--active {
+  background: #6419e6 !important;
+  border-radius: 0.5rem !important;
+}
