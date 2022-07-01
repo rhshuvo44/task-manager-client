@@ -11,7 +11,7 @@ const CreateTask = () => {
     if (content) {
       try {
         const data = { content, status: "uncomplete" };
-        await axios.post("https://red-marks-63494.herokuapp.com/create", data);
+        await axios.post("https://red-marks-63494.herokuapp.com/task/create", data);
         toast.success("Task successfully created");
         setContent("");
       } catch (err) {
